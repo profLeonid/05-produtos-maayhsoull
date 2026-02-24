@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./main.js" defer></script>
+    <title>PRODUTOS</title>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center h-screen gap-4">
+    <h1 class="text-2xl ">Lista de produtos</h1>
+    <input 
+        type="text" 
+        class="border rounded px-6 py-1"
+        id="produto"
+    >
+    <button 
+        class="bg-blue-400 text-white px-4 rounded"
+        onclick="adicionarProduto()"
+    >
+        Adicionar
+    </button>
+    <div 
+        id="lista"  
+        class="flex flex-col gap-2"
+    >
+
+    </div>
+</body>
+</html>
