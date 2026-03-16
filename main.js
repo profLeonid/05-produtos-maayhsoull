@@ -25,11 +25,11 @@ function adicionarProduto() {
         spanCodigo.className = 'bg-blue-100 px-8 py-2'
 
         const spanQuantidade = document.createElement('td')
-        spanQuantidade.textContent = codigo.value
+        spanQuantidade.textContent = quantidade.value
         spanQuantidade.className = 'bg-blue-100 px-8 py-2'
 
-        linha.appendChild(spanProduto)
         linha.appendChild(spanCodigo)
+        linha.appendChild(spanProduto)
         linha.appendChild(spanQuantidade)
 
         lista.appendChild(linha)
