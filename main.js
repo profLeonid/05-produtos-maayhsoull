@@ -14,24 +14,41 @@ function adicionarProduto() {
         quantidade.focus()
     } else { // se estiver preenchido cria o objeto apaga o que está escrito anteriormente e volta o ponteiro após o click no botao adicionar
         //cria o span e pega o elemento dele
-        const spanProduto = document.createElement('span')
+        const linha = document.createElement('tr')
+
+        const spanProduto = document.createElement('td')
         spanProduto.textContent = produto.value
-        spanProduto.className = 'flex flex-col bg-blue-100 px-8 py-2'
+        spanProduto.className = 'bg-blue-100 px-8 py-2'
 
-        const spanCodigo = document.createElement('span')
+        const spanCodigo = document.createElement('td')
         spanCodigo.textContent = codigo.value
-        spanCodigo.className = 'flex flex-col bg-blue-100 px-8 py-2'
+        spanCodigo.className = 'bg-blue-100 px-8 py-2'
 
-        const spanQuantidade = document.createElement('span')
+        const spanQuantidade = document.createElement('td')
         spanQuantidade.textContent = codigo.value
-        spanQuantidade.className = 'flex flex-col bg-blue-100 px-8 py-2'
+        spanQuantidade.className = 'bg-blue-100 px-8 py-2'
 
-        lista.appendChild(spanProduto)
-        lista.appendChild(spanCodigo)
-        lista.appendChild(spanQuantidade)
+        linha.appendChild(spanProduto)
+        linha.appendChild(spanCodigo)
+        linha.appendChild(spanQuantidade)
+
+        lista.appendChild(linha)
+
         produto.value = ""
         codigo.value = ''
         quantidade.value = ''
         produto.focus()
     }
+}
+
+function deletarProduto(){
+
+    const lista = document.getElementById('lista')
+
+    if (lista.lastElementChild) {
+        lista.lastElementChild.remove()
+    } else {
+        alert('Não há produtos para remover')
+    }
+
 }
